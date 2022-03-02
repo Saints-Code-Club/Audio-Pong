@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Audio Pong</title>
+		<script src="lib/p5.js"></script>
+		<script src="lib/p5.clickable.js"></script>
+		<script src="lib/p5.collide2d.js"></script>
+		<script src="lib/p5.sound.js"></script>
+  </head>
+  <body>
+    <script>
+
+			//Extended by other player classes
+			class Player{
+				y = (height/2);
+				constructor(isP1) {
+					this.isP1 = isP1;
+				}
+				draw() {
+				}
+			}
+
+			class LocalPlayer extends Player{
+				constructor(isP1){
+					super(isP1);
+				}
+				checkInput(){
+					
+				}
+			}
+
+			class RemotePlayer extends Player{
+				constructor(isP1){
+					super(isP1);
+				}
+				listen(){
+					
+				}
+			}
+
+			//Vector comes with stuff for tracking position, direction, and magnitude (velocity)
+			class Ball extends p5.Vector{
+				constructor() {
+					super(width/2, height/2);
+				}
+				draw() {
+					
+				}
+			}
+			
+			function setup(){
+				createCanvas(450, 250);
+				background('black');;
+				let mic = new p5.AudioIn();
+			}
+			
+			
+		</script>
+  </body>
+</html>
